@@ -1,6 +1,5 @@
 import { GameLayout } from './components/GameLayout';
 import { useState } from 'react';
-// Все является иперативным стилем
 export const App = () => {
 	const [currentPlayer, setCurrentPlayer] = useState('X');
 	const [isGameEnded, setIsGameEnded] = useState(false);
