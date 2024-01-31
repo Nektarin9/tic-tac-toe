@@ -6,7 +6,7 @@ export const FieldLavout = ({ field, makeMove, currentPlayer, ...props }) => {
 		<button
 			onClick={makeMove}
 			key={Math.random()}
-			className={styles.FieldLavoutButton}
+			className={`${styles.FieldLavoutButton} ${item === 'X' ? styles.red : styles.green}`}
 			numberbtn={index}
 		>
 			{item}
@@ -17,5 +17,5 @@ export const FieldLavout = ({ field, makeMove, currentPlayer, ...props }) => {
 FieldLavout.propTypes = {
 	field: PropTypes.array,
 	makeMove: PropTypes.func,
-	currentPlayer: PropTypes.bool,
+	currentPlayer: PropTypes.string,
 };

@@ -4,25 +4,11 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-size: calc(10px + 2vmin);
-	color: white;
 }
 
 .GameLayoutContainerField {
-	display: flex;
-	flex-wrap: wrap;
-	max-width: 600px;
-	border: 1px solid white;
-}
-
-@media (max-width: 600px) {
-	.GameLayoutContainerField {
-		max-width: 300px;
-	}
-	.GameLayoutHeader {
-		align-items: flex-start;
-
-	}
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
 }
 
 .GameLayoutBtn {
@@ -43,4 +29,17 @@
 .GameLayoutBtn:hover {
 	background-color: rgb(255, 68, 0);
 	transform: 0.3s;
+}
+
+@media (max-width: 600px) {
+	.GameLayoutContainerField {
+		width: 100%;
+		min-height: none;
+	}
+	.GameLayoutHeader {
+		align-items: flex-start;
+	}
+	.GameLayoutBtn {
+		font-size: 25px;
+	}
 }

@@ -60,10 +60,12 @@ export const Field = ({
 	}
 	function makeMove(event) {
 		const { target } = event;
+
 		if (target.closest) {
 			if (!target.textContent) {
 				let index = Number(target.attributes[1].value);
 				let array = field;
+
 				if (currentPlayer === 'X') {
 					setCurrentPlayer('O');
 				} else {
@@ -78,7 +80,13 @@ export const Field = ({
 			}
 		}
 	}
-	return <FieldLavout makeMove={makeMove} field={field}></FieldLavout>;
+	return (
+		<FieldLavout
+			makeMove={makeMove}
+			field={field}
+			currentPlayer={currentPlayer}
+		></FieldLavout>
+	);
 };
 
 Field.propTypes = {
