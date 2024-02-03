@@ -1,1 +1,1 @@
-https://65ba591e088606e0e782ed46--sunny-entremet-437f8d.netlify.app/
+https://65be99a365175aca27d50bcb--stellar-frangipane-bddc87.netlify.app/
