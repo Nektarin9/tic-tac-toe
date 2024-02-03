@@ -7,6 +7,7 @@ export const Field = ({
 	setCurrentPlayer,
 	setField,
 	setIsDraw,
+	isGameEnded,
 	setIsGameEnded,
 	...props
 }) => {
@@ -61,7 +62,7 @@ export const Field = ({
 	function makeMove(event) {
 		const { target } = event;
 
-		if (target.closest) {
+		if (target.closest && !isGameEnded) {
 			if (!target.textContent) {
 				let index = Number(target.attributes[1].value);
 				let array = field;
